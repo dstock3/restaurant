@@ -1,1 +1,1 @@
-console.log("Is this thing working?");
+(()=>{"use strict";(()=>{let e=document.getElementById("content");console.log(e)})()})();
