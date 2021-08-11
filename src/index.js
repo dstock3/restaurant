@@ -1,1 +1,3 @@
-console.log("Is this thing working?")
+import { pageLoad } from './landingPage'
+
+pageLoad()
