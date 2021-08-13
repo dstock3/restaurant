@@ -1,3 +1,8 @@
+body {
+    background-color: bisque;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 .landing-page {
     display: flex;
     flex-flow: column;
