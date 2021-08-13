@@ -23,24 +23,23 @@ const pageLoad = () => {
     
     const hoursElement = elementBuilder("article", "hours", landingPage);
     const hours = elementBuilder("ul", "hours", hoursElement);
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    
 
-    const hoursList = (daysArray) => {
+    const hoursList = (() => {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
         let listItemArray = []
-        for (let i = 0; i < daysArray.length; i++) {
-            let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
-            if ((daysArray[i] === "Sunday") || (daysArray[i] === "Monday")) {
+        for (let i = 0; i < days.length; i++) {
+            let listItem = elementBuilder("li", `${days[i]}-hours`, hours)
+            if ((days[i] === "Sunday") || (days[i] === "Monday")) {
                 listItem.textContent = `${days[i]}: 9am - 5pm`;
                 listItemArray.push(listItem);
             } else {
-                listItem.textContent = `${daysArray[i]}: 9am - 9pm`;
+                listItem.textContent = `${days[i]}: 9am - 9pm`;
                 listItemArray.push(listItem);
             }
         }
         return listItemArray;
-    };
-
-    hoursList(days);
+    })();
 }
 
     
