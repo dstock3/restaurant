@@ -26,18 +26,18 @@ const pageLoad = () => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
     const hoursList = (daysArray) => {
-        
+        let listItemArray = []
         for (i = 0; i < daysArray.length; i++) {
+            let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
             if ((daysArray[i] === "Sunday") || (daysArray[i] === "Monday")) {
-                let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
                 listItem.textContent = `${days[i]}: 9am - 5pm`;
-
+                listItemArray.push(listItem);
             } else {
-                let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
                 listItem.textContent = `${daysArray[i]}: 9am - 9pm`;
+                listItemArray.push(listItem);
             }
-
         }
+        return listItemArray;
     };
 
     hoursList(days);
