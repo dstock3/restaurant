@@ -16,3 +16,7 @@
 .description-section {
     width: 50%;
 }
+
+.hours-list {
+    list-style-type: none;
+}
