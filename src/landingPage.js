@@ -27,7 +27,7 @@ const pageLoad = () => {
 
     const hoursList = (daysArray) => {
         let listItemArray = []
-        for (i = 0; i < daysArray.length; i++) {
+        for (let i = 0; i < daysArray.length; i++) {
             let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
             if ((daysArray[i] === "Sunday") || (daysArray[i] === "Monday")) {
                 listItem.textContent = `${days[i]}: 9am - 5pm`;
