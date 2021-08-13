@@ -3,3 +3,16 @@
     flex-flow: column;
     align-items: center;
 }
+
+.page-head {
+    font-size: 2em;
+}
+
+.landing-image {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.description-section {
+    width: 50%;
+}
