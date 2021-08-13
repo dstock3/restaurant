@@ -9,18 +9,40 @@ const pageLoad = () => {
     }
     
     /* Page Contents */
-    let content = document.getElementById("content");
+    const content = document.getElementById("content");
     
-    let landingPage = elementBuilder("section", "landing-page", content);
-    let header = elementBuilder("header", "page-head",  landingPage);
+    const landingPage = elementBuilder("section", "landing-page", content);
+    const header = elementBuilder("header", "page-head",  landingPage);
     header.textContent = "Vito's Pizzeria"
-    let article = elementBuilder("article", "landing-article", landingPage);
-    
-    article.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    
-    let landingImage = elementBuilder("img", "landing-image", landingPage);
+
+    const landingImage = elementBuilder("img", "landing-image", landingPage);
     landingImage.src = `http://via.placeholder.com/640x360`;
 
+    const description = elementBuilder("article", "landing-article", landingPage);
+    description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    
+    const hoursElement = elementBuilder("article", "hours", landingPage);
+    const hours = elementBuilder("ul", "hours", hoursElement);
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+    const hoursList = (daysArray) => {
+        
+        for (i = 0; i < daysArray.length; i++) {
+            if ((daysArray[i] === "Sunday") || (daysArray[i] === "Monday")) {
+                let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
+                listItem.textContent = `${days[i]}: 9am - 5pm`;
+
+            } else {
+                let listItem = elementBuilder("li", `${daysArray[i]}-hours`, hours)
+                listItem.textContent = `${daysArray[i]}: 9am - 9pm`;
+            }
+
+        }
+    };
+
+    hoursList(days);
 }
+
+    
 
 export { pageLoad }
