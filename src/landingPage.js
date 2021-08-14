@@ -47,7 +47,9 @@ const landingPage = () => {
         const head = elementBuilder("h2", "location-head", section);
         head.textContent = "Location";
         const address = elementBuilder("p", "address", section);
-        address.textContent = "999 Firehouse Lane, New York, NY 10210";
+        address.textContent = "999 Firehouse Lane";
+        const addressTwo = elementBuilder("p", "address", section);
+        addressTwo.textContent = "New York, NJ 10210";
         return { section, header, address }
     })();
 
