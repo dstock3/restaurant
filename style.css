@@ -3,6 +3,10 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+h2 {
+    margin: auto;
+}
+
 .landing-page {
     display: flex;
     flex-flow: column;
@@ -28,8 +32,14 @@ section {
     width: 50%;
 }
 
+.hours {
+    display: flex;
+    flex-flow: column;
+}
+
 .hours-list {
     list-style-type: none;
+    padding-inline-start: 0px;
 }
 
 .location-section {
