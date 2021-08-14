@@ -1,20 +1,17 @@
 const landingPage = () => {
 
-        /* DOM manipulation */
-        function elementBuilder(element, classLabel, parentName) {
-            let item = document.createElement(element);
-            item.classList.add(classLabel);
-            parentName.appendChild(item);
-            return item;
-        }
-        
-        /* Page Contents */
-        const content = document.getElementById("content");
+    /* DOM manipulation */
+    function elementBuilder(element, classLabel, parentName) {
+        let item = document.createElement(element);
+        item.classList.add(classLabel);
+        parentName.appendChild(item);
+        return item;
+    }
+    
+    /* Page Contents */
+    const content = document.getElementById("content");
 
     const pageDiv = elementBuilder("div", "landing-page", content);
-    const header = elementBuilder("h1", "page-head",  pageDiv);
-    header.textContent = "Chef Vito's Pizzeria";
-
     const landingImage = elementBuilder("img", "landing-image", pageDiv);
     landingImage.src = `http://via.placeholder.com/640x360`;
 
@@ -50,7 +47,7 @@ const landingPage = () => {
         address.textContent = "999 Firehouse Lane";
         const addressTwo = elementBuilder("p", "address", section);
         addressTwo.textContent = "New York, NJ 10210";
-        return { section, header, address }
+        return { section, head, address }
     })();
 
     return { hours, location }
