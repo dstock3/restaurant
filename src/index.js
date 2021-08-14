@@ -41,7 +41,8 @@ const tabBuilder = (() => {
     let nav = elementBuilder('nav', 'main-nav', content);
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
-        let tabElement = elementBuilder('div', tab, nav);
+        let tabElement = elementBuilder('div', "nav-item", nav);
+        tabElement.id = tab
         tabElement.textContent = tab;
         tabElement.addEventListener('click', goToPage(tab))
     }
