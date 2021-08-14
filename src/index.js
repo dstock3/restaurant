@@ -22,6 +22,8 @@ const siteHead = elementBuilder("h1", "page-head",  content);
 siteHead.textContent = "Chef Vito's Pizzeria";
 
 function goToPage(tab) {
+    let selectedTab = document.getElementById(tab);
+    selectedTab.classList.add("selected")
     if (tab === 'Home') {
         //removeChildren(content)
         landingPage()
