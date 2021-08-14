@@ -3,8 +3,21 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+#content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+
 h1 {
     padding-top: .5%;
+}
+
+nav {
+    width: 33%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 h2 {
