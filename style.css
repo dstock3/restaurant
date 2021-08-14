@@ -25,3 +25,9 @@ body {
 .hours-list {
     list-style-type: none;
 }
+
+.location-section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
