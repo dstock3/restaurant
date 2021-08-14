@@ -18,6 +18,12 @@ body {
     padding-bottom: 2%;
 }
 
+section {
+    padding: 1%;
+    background-color: #ee9876;
+    border-radius: 10px;
+}
+
 .description-section {
     width: 50%;
 }
@@ -29,5 +35,4 @@ body {
 .location-section {
     display: flex;
     flex-flow: column;
-    align-items: center;
 }

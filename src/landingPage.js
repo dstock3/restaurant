@@ -10,9 +10,9 @@ const pageLoad = () => {
     
     /* Page Contents */
     const content = document.getElementById("content");
-    
+
     const landingPage = elementBuilder("div", "landing-page", content);
-    const header = elementBuilder("header", "page-head",  landingPage);
+    const header = elementBuilder("h1", "page-head",  landingPage);
     header.textContent = "Chef Vito's Pizzeria"
 
     const landingImage = elementBuilder("img", "landing-image", landingPage);
@@ -25,6 +25,8 @@ const pageLoad = () => {
 
     const hours = (() => {
         const section = elementBuilder("section", "hours", landingPage);
+        const head = elementBuilder("h2", "hours-head", section);
+        head.textContent = "Hours";
         const listElement = elementBuilder("ul", "hours-list", section);
         const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
         let listItemArray = []
@@ -43,8 +45,8 @@ const pageLoad = () => {
 
     const location = (() => {
         const section = elementBuilder("section", "location-section", landingPage)
-        const header = elementBuilder("header", "location-head", section);
-        header.textContent = "Location";
+        const head = elementBuilder("h2", "location-head", section);
+        head.textContent = "Location";
         const address = elementBuilder("p", "address", section);
         address.textContent = "999 Firehouse Lane, New York, NY 10210";
         return { section, header, address }
