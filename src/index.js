@@ -23,26 +23,28 @@ siteHead.textContent = "Chef Vito's Pizzeria";
 
 function goToPage(tab) {
     if (tab === 'Home') {
+        //removeChildren(content)
         landingPage()
     };
     if (tab === 'Menu') {
+        //removeChildren(content)
         menu()
     };
     if (tab === 'Contact') {
+        //removeChildren(content)
         contact()
     }
 }
 
 const tabBuilder = (() => {
     const tabs = ['Home', 'Menu', 'Contact']
-    let nav = elementBuilder('div', 'nav', content);
+    let nav = elementBuilder('nav', 'main-nav', content);
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('div', tab, nav);
         tabElement.textContent = tab;
         tabElement.addEventListener('click', goToPage(tab))
     }
-
 })();
 
 
