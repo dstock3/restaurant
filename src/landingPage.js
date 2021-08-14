@@ -1,4 +1,4 @@
-const pageLoad = () => {
+const landingPage = () => {
 
     /* DOM manipulation */
     function elementBuilder(element, classLabel, parentName) {
@@ -13,13 +13,12 @@ const pageLoad = () => {
 
     const landingPage = elementBuilder("div", "landing-page", content);
     const header = elementBuilder("h1", "page-head",  landingPage);
-    header.textContent = "Chef Vito's Pizzeria"
+    header.textContent = "Chef Vito's Pizzeria";
 
     const landingImage = elementBuilder("img", "landing-image", landingPage);
     landingImage.src = `http://via.placeholder.com/640x360`;
 
     const descriptionSection = elementBuilder("section", "description-section", landingPage);
-
     const description = elementBuilder("section", "description", descriptionSection);
     description.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
@@ -54,4 +53,4 @@ const pageLoad = () => {
 
 }
 
-export { pageLoad }
+export { landingPage }

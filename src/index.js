@@ -1,5 +1,5 @@
-import { pageLoad } from './landingPage'
-pageLoad()
+import { landingPage } from './landingPage'
+landingPage()
 
 
 
