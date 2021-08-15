@@ -22,30 +22,38 @@ const siteHead = elementBuilder("h1", "page-head",  content);
 siteHead.textContent = "Chef Vito's Pizzeria";
 
 const tabBuilder = (() => {
-    
+
     const tabs = ['Home', 'Menu', 'Contact']
     let nav = elementBuilder('nav', 'main-nav', content);
+
+    landingPage()
 
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('div', "nav-item", nav);
         tabElement.id = tab
         tabElement.textContent = tab;
-        
-        let existingPage = content.firstChild.firstChild.nextSibling;
-        console.log(existingPage)
-        
+
+        const landing = document.getElementById("Home");
+        landing.classList.add("selected");
+
+        let contentChildren = content.childNodes;
+        let existingPage = contentChildren[2];
+
         tabElement.addEventListener('click', function goToPage() {
             tabElement.classList.add("selected");
             
             if (tab === 'Home') {
+                existingPage.remove()
                 landingPage()
             };
 
             if (tab === 'Menu') {
+                existingPage.remove()
                 menu()
             };
             if (tab === 'Contact') {
+                existingPage.remove()
                 contact()
             }
         });
@@ -53,9 +61,6 @@ const tabBuilder = (() => {
     }
 })();
 
-landingPage()
-const landing = document.getElementById("Home");
-landing.classList.add("selected");
 
 
 
