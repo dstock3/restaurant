@@ -25,22 +25,14 @@ nav {
 }
 
 .nav-item {
-    background-color:rgb(200, 114, 114);
+    background-color:rgb(211, 173, 130);
     padding: 3%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .selected {
     background-color: bisque; 
-}
-
-#Home {
-    border-left: solid bisque 2px;
-    border-top-left-radius: 5px;
-}
-
-#Contact {
-    border-right: solid bisque 2px;
-    border-top-right-radius: 5px;
 }
 
 h2 {
