@@ -9,6 +9,8 @@ const menu = () => {
 
     const content = document.getElementById("content");
 
+    const pageDiv = elementBuilder("div", "menu", content);
+
     return { elementBuilder, content }
 }
 

@@ -22,22 +22,25 @@ function tabSelect(deselectedTabOne, deselectedTabTwo) {
     secondTab.classList.remove("selected");
 }
 
-const tabBuilder = (() => {
+function removeExistingPage() {
+    let contentChildren = content.childNodes;
+    console.log(contentChildren)
+    let existingPage = contentChildren[2];
+    existingPage.remove()
+}
 
+const tabBuilder = (() => {
     const tabs = ['Home', 'Menu', 'Contact']
     let nav = elementBuilder('nav', 'main-nav', content);
+
+    landingPage()
 
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('div', "nav-item", nav);
         tabElement.id = tab
         tabElement.textContent = tab;
-
-        let contentChildren = content.childNodes;
-        let existingPage = contentChildren[2];
-
-        landingPage()
-
+        
         const landing = document.getElementById("Home");
         landing.classList.add("selected");
 
@@ -47,20 +50,20 @@ const tabBuilder = (() => {
             if (tab === 'Home') {
                 tabSelect("Menu", "Contact");
 
-                existingPage.remove()
+                removeExistingPage() 
                 landingPage()
             };
 
             if (tab === 'Menu') {
                 tabSelect("Home", "Contact");
 
-                existingPage.remove()
+                removeExistingPage() 
                 menu()
             };
             if (tab === 'Contact') {
                 tabSelect("Home", "Menu");
                 
-                existingPage.remove()
+                removeExistingPage() 
                 contact()
             }
         });

@@ -9,6 +9,8 @@ const contact = () => {
 
     const content = document.getElementById("content");
 
+    const pageDiv = elementBuilder("div", "contact", content);
+
     return { elementBuilder, content }
 }
 
