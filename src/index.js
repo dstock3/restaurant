@@ -10,12 +10,6 @@ function elementBuilder(element, classLabel, parentName) {
     return item;
 }
 
-function removeChildren(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}
-
 /* Basic Site Elements */
 const content = document.getElementById("content");
 const siteHead = elementBuilder("h1", "page-head",  content);
