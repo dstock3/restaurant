@@ -21,32 +21,37 @@ const content = document.getElementById("content");
 const siteHead = elementBuilder("h1", "page-head",  content);
 siteHead.textContent = "Chef Vito's Pizzeria";
 
-function goToPage(tab) {
-    let selectedTab = document.getElementById(tab);
-    selectedTab.classList.add("selected")
-    if (tab === 'Home') {
-        //removeChildren(content)
-        landingPage()
-    };
-    if (tab === 'Menu') {
-        //removeChildren(content)
-        menu()
-    };
-    if (tab === 'Contact') {
-        //removeChildren(content)
-        contact()
-    }
-}
+function goToPage(tab) 
 
 const tabBuilder = (() => {
     const tabs = ['Home', 'Menu', 'Contact']
     let nav = elementBuilder('nav', 'main-nav', content);
+
     for (let i = 0; i < tabs.length; i++) {
         let tab = tabs[i];
         let tabElement = elementBuilder('div', "nav-item", nav);
         tabElement.id = tab
         tabElement.textContent = tab;
-        tabElement.addEventListener('click', goToPage(tab))
+        
+        tabElement.addEventListener('click', function goToPage() {
+            tabElement.classList.add("selected");
+
+            if (tab === 'Home') {
+                //removeChildren(content)
+                landingPage()
+            };
+
+            if (tab === 'Menu') {
+                //removeChildren(content)
+                menu()
+            };
+
+            if (tab === 'Contact') {
+                //removeChildren(content)
+                contact()
+            }
+        });
+
     }
 })();
 

@@ -1,5 +1,5 @@
 body {
-    background-color: bisque;
+    background-color: rgb(200, 114, 114);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.25em;
 }
@@ -25,21 +25,21 @@ nav {
 }
 
 .nav-item {
-    background-color: bisque;
+    background-color:rgb(200, 114, 114);
     padding: 3%;
 }
 
 .selected {
-    background-color: rgb(200, 114, 114);
+    background-color: bisque; 
 }
 
 #Home {
-    border-left: solid rgb(200, 114, 114) 2px;
+    border-left: solid bisque 2px;
     border-top-left-radius: 5px;
 }
 
 #Contact {
-    border-right: solid rgb(200, 114, 114) 2px;
+    border-right: solid bisque 2px;
     border-top-right-radius: 5px;
 }
 
@@ -48,8 +48,9 @@ h2 {
 }
 
 .landing-page {
-    background-color: rgb(200, 114, 114);
-    border: solid rgb(200, 114, 114) 2px;
+    background-color: bisque;
+    border: solid bisque 2px;
+    border-radius: 10px;;
     display: flex;
     flex-flow: column;
     align-items: center;
