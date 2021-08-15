@@ -11,7 +11,8 @@ const landingPage = () => {
     /* Page Contents */
     const content = document.getElementById("content");
 
-    const pageDiv = elementBuilder("div", "landing-page", content);
+    const pageDiv = elementBuilder("div", "selected-page", content);
+    pageDiv.id = "landing";
     const landingImage = elementBuilder("img", "landing-image", pageDiv);
     landingImage.src = `http://via.placeholder.com/640x360`;
 

@@ -24,7 +24,6 @@ function tabSelect(deselectedTabOne, deselectedTabTwo) {
 
 function removeExistingPage() {
     let contentChildren = content.childNodes;
-    console.log(contentChildren)
     let existingPage = contentChildren[2];
     existingPage.remove()
 }

@@ -9,7 +9,8 @@ const contact = () => {
 
     const content = document.getElementById("content");
 
-    const pageDiv = elementBuilder("div", "contact", content);
+    const pageDiv = elementBuilder("div", "selected-page", content);
+    pageDiv.id = "contact";
 
     return { elementBuilder, content }
 }
