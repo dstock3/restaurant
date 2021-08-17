@@ -15,11 +15,24 @@ const contact = () => {
     const contactHead = elementBuilder("h1", "contact-head", pageDiv);
     contactHead.textContent = "Contact Information"
 
+    const location = (() => {
+        const section = elementBuilder("section", "location-section", pageDiv)
+        const head = elementBuilder("h2", "location-head", section);
+        head.textContent = "Location";
+        const address = elementBuilder("p", "address", section);
+        address.textContent = "999 Firehouse Lane";
+        const addressTwo = elementBuilder("p", "address", section);
+        addressTwo.textContent = "New York, NJ 10210";
+        return { section, head, address }
+    })();
+
     const contactBody = elementBuilder("section", "contact-section", pageDiv);
     const phone = elementBuilder("p", "phone", contactBody);
     phone.textContent = "Phone Number: (973) 111-1111"
     const email = elementBuilder("p", "email", contactBody);
     email.textContent = "E-Mail: contact@vitospizza.com"
+
+
 }
 
 export { contact }

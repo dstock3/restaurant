@@ -40,18 +40,6 @@ const landingPage = () => {
         return { listItemArray, section, listElement };
     })();
 
-    const location = (() => {
-        const section = elementBuilder("section", "location-section", pageDiv)
-        const head = elementBuilder("h2", "location-head", section);
-        head.textContent = "Location";
-        const address = elementBuilder("p", "address", section);
-        address.textContent = "999 Firehouse Lane";
-        const addressTwo = elementBuilder("p", "address", section);
-        addressTwo.textContent = "New York, NJ 10210";
-        return { section, head, address }
-    })();
-
-    return { hours, location }
 }
 
 export { landingPage }
