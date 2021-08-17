@@ -12,7 +12,14 @@ const contact = () => {
     const pageDiv = elementBuilder("div", "selected-page", content);
     pageDiv.id = "contact";
 
-    return { elementBuilder, content }
+    const contactHead = elementBuilder("h1", "contact-head", pageDiv);
+    contactHead.textContent = "Contact Information"
+
+    const contactBody = elementBuilder("section", "contact-section", pageDiv);
+    const phone = elementBuilder("p", "phone", contactBody);
+    phone.textContent = "Phone Number: (973) 111-1111"
+    const email = elementBuilder("p", "email", contactBody);
+    email.textContent = "E-Mail: contact@vitospizza.com"
 }
 
 export { contact }

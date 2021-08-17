@@ -47,12 +47,13 @@ h2 {
     display: flex;
     flex-flow: column;
     align-items: center;
+    width: 55%;
 }
 
 .landing-image {
     padding-top: 2%;
     padding-bottom: 2%;
-    width: 33%;
+    width: 65%;
 }
 
 section {
@@ -61,7 +62,7 @@ section {
 }
 
 .description-section {
-    width: 33%;
+    width: 70%;
 }
 
 .hours {
@@ -93,7 +94,7 @@ p {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 35%;
+    width: 90%;
 }
 
 .food-head {
@@ -102,8 +103,11 @@ p {
 
 .food-pic {
     padding-bottom: 7.5%;
+    width: 65%;
 }
 
 .food-description {
     padding-bottom: 10%;
+    width: 65%;
 }
+
