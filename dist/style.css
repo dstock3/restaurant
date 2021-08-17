@@ -88,3 +88,22 @@ p {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
+
+.food-item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 35%;
+}
+
+.food-head {
+    padding-bottom: 2%;
+}
+
+.food-pic {
+    padding-bottom: 7.5%;
+}
+
+.food-description {
+    padding-bottom: 10%;
+}
