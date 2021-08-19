@@ -12,9 +12,6 @@ const contact = () => {
     const pageDiv = elementBuilder("div", "selected-page", content);
     pageDiv.id = "contact";
 
-    const contactHead = elementBuilder("h1", "contact-head", pageDiv);
-    contactHead.textContent = "Contact Information"
-
     const location = (() => {
         const section = elementBuilder("section", "location-section", pageDiv)
         const head = elementBuilder("h2", "location-head", section);

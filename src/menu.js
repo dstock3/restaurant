@@ -12,9 +12,6 @@ const menu = () => {
     const pageDiv = elementBuilder("div", "selected-page", content);
     pageDiv.id = "menu"
 
-    const pageHead = elementBuilder("h1", "menu-head", pageDiv);
-    pageHead.textContent = "Menu"
-
     const foodItem = (name, pic, description) => {
         return { name, pic, description }
     }
