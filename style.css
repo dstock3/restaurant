@@ -48,6 +48,7 @@ h2 {
     flex-flow: column;
     align-items: center;
     width: 55%;
+    min-width: 375px;
 }
 
 .landing-head {
