@@ -86,12 +86,17 @@ section {
 }
 
 .location-head {
+    padding-top: 5%;
     padding-bottom: .5em;
 }
 
 p {
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+#classic {
+    padding-top: 2%;
 }
 
 .food-item {
