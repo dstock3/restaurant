@@ -11,6 +11,9 @@ function elementBuilder(element, classLabel, parentName) {
 }
 
 /* Basic Site Elements */
+const body = document.getElementsByTagName("body")[0];
+const background = elementBuilder("img", "bkg", body);
+
 const content = document.getElementById("content");
 const siteHead = elementBuilder("h1", "page-head",  content);
 siteHead.textContent = "Chef Vito's Pizzeria";
