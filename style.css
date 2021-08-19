@@ -4,6 +4,13 @@ body {
     font-size: 1.25em;
 }
 
+.head-div {
+    background-color: bisque;
+    padding: 1%;
+    padding-inline: 5%;
+    
+}
+
 #content {
     display: flex;
     flex-flow: column;
@@ -17,6 +24,7 @@ h1 {
 }
 
 nav {
+    padding-top: 2%;
     width: 33%;
     display: flex;
     justify-content: center;
