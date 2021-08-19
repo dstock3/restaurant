@@ -29,7 +29,6 @@ const contact = () => {
     const email = elementBuilder("p", "email", contactBody);
     email.textContent = "E-Mail: contact@vitospizza.com"
 
-
 }
 
 export { contact }
