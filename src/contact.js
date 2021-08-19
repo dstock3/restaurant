@@ -12,18 +12,18 @@ const contact = () => {
     const pageDiv = elementBuilder("div", "selected-page", content);
     pageDiv.id = "contact";
 
+    const contactBody = elementBuilder("section", "contact-section", pageDiv);
+
     const location = (() => {
-        const section = elementBuilder("section", "location-section", pageDiv)
-        const head = elementBuilder("h2", "location-head", section);
+        const head = elementBuilder("h2", "location-head", contactBody);
         head.textContent = "Location";
-        const address = elementBuilder("p", "address", section);
+        const address = elementBuilder("p", "address", contactBody);
         address.textContent = "999 Firehouse Lane";
-        const addressTwo = elementBuilder("p", "address", section);
+        const addressTwo = elementBuilder("p", "address", contactBody);
         addressTwo.textContent = "New York, NJ 10210";
-        return { section, head, address }
+        return { head, address }
     })();
 
-    const contactBody = elementBuilder("section", "contact-section", pageDiv);
     const phone = elementBuilder("p", "phone", contactBody);
     phone.textContent = "Phone Number: (973) 111-1111"
     const email = elementBuilder("p", "email", contactBody);
