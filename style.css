@@ -49,6 +49,11 @@ h2 {
     align-items: center;
     width: 55%;
     min-width: 375px;
+    min-height: 500px;
+}
+
+img {
+    min-width: 350px;
 }
 
 .landing-head {
