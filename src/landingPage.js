@@ -13,6 +13,10 @@ const landingPage = () => {
 
     const pageDiv = elementBuilder("div", "selected-page", content);
     pageDiv.id = "landing";
+
+    const landingHead = elementBuilder("h2", "landing-head", pageDiv);
+    landingHead.textContent = "Welcome to Chef Vito's!"
+
     const landingImage = elementBuilder("img", "landing-image", pageDiv);
     landingImage.src = `http://via.placeholder.com/640x360`;
 
