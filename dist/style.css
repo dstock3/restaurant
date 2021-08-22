@@ -56,7 +56,7 @@ h2 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 55%;
+    width: 50%;
     min-width: 375px;
     min-height: 500px;
 }
