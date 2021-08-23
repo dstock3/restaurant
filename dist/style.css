@@ -94,12 +94,6 @@ section {
     padding-inline-start: 0px;
 }
 
-.location-section {
-    display: flex;
-    flex-flow: column;
-    padding-bottom: 2%;
-}
-
 .location-head {
     padding-top: 5%;
     padding-bottom: .5em;
@@ -138,3 +132,18 @@ p {
 .phone {
     padding-top: 10%;
 }
+
+.contact-section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.location-image {
+    padding-bottom: 5%;
+}
+
+.email {
+    padding-bottom: 10%;
+}
+
