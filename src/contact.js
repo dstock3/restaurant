@@ -19,7 +19,7 @@ const contact = () => {
         head.textContent = "Location";
 
         const locationImage = elementBuilder("img", "location-image", contactBody);
-        locationImage.src = "../dist/images/map.png";
+        locationImage.src = "./dist/images/map.png";
 
         const address = elementBuilder("p", "address", contactBody);
         address.textContent = "999 Firehouse Lane";
