@@ -18,7 +18,7 @@ const landingPage = () => {
     landingHead.textContent = "Welcome to Chef Vito's!"
 
     const landingImage = elementBuilder("img", "landing-image", pageDiv);
-    landingImage.src = "./dist/images/home.jpg";
+    landingImage.src = "dist/images/home.jpg";
 
     const descriptionSection = elementBuilder("section", "description-section", pageDiv);
     const description = elementBuilder("p", "description", descriptionSection);
