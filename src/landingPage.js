@@ -1,13 +1,6 @@
-const landingPage = () => {
+import { elementBuilder } from './index'
 
-    /* DOM manipulation */
-    function elementBuilder(element, classLabel, parentName) {
-        let item = document.createElement(element);
-        item.classList.add(classLabel);
-        parentName.appendChild(item);
-        return item;
-    }
-    
+const landingPage = () => {
     /* Page Contents */
     const content = document.getElementById("content");
 

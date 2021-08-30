@@ -71,6 +71,8 @@ const tabBuilder = (() => {
     }
 })();
 
+export { elementBuilder }
+
 
 
 
